@@ -1,0 +1,17 @@
+version: '3.7'
+services: 
+  app:
+    build:
+      context: .
+    restart: always
+    environment:
+      - PORT=3000
+    networks:
+      - main
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+
+networks:
+  main:
